@@ -31,6 +31,8 @@
   .window { white-space: nowrap; color: #666; font-size: 0.9rem; }
   .ok { color: #1a7f37; font-weight: 600; }
   .hit { color: #9a3412; font-weight: 700; }
+  .fail { color: #b91c1c; font-weight: 700; }
+  tr.failrow td { background: #fdf1f1; }
   .empty { text-align: center; color: #888; padding: 1.5rem; }
   footer { margin-top: 1.5rem; color: #888; font-size: 0.8rem; }
   @media (prefers-color-scheme: dark) {
@@ -40,6 +42,8 @@
     th { background: #262626; color: #bbb; }
     th, td { border-color: #2d2d2d; }
     .ok { color: #4ade80; }
+    .fail { color: #f87171; }
+    tr.failrow td { background: #271b1b; }
     .time { color: #999; }
   }
 </style>
@@ -51,31 +55,38 @@
   This page is the receipt.</p>
 
   <div class="cards">
-    <div class="card"><div class="k">Total checks logged</div><div class="v">40</div></div>
-    <div class="card"><div class="k">Last checked</div><div class="v">Thu, Jul 9 2026 at 10:25 AM PDT</div></div>
+    <div class="card"><div class="k">Total checks logged</div><div class="v">46</div></div>
+    <div class="card"><div class="k">Last checked</div><div class="v">Thu, Jul 9 2026 at 2:12 PM PDT</div></div>
     <div class="card"><div class="k">Booking window</div><div class="v">2026-07-10 → 2026-10-31</div></div>
+    <div class="card"><div class="k">Failed checks</div><div class="v">6</div></div>
   </div>
-  <p class="sub">40 most recent check(s) showed no availability.</p>
+  <p class="sub">40 most recent successful check(s) showed no availability. 6 check(s) failed to complete — highlighted below.</p>
 
   <table>
     <thead><tr><th>Date checked</th><th>Result</th><th>Window scanned</th></tr></thead>
     <tbody>
+<tr class="failrow"><td class="date">Thu, Jul 9 2026<br><span class="time">2:12 PM PDT</span></td><td><span class="fail">Check failed</span> — no data for this run</td><td class="window">—</td></tr>
 <tr><td class="date">Thu, Jul 9 2026<br><span class="time">10:25 AM PDT</span></td><td><span class="ok">No availability</span></td><td class="window">2026-07-10 → 2026-10-31</td></tr>
 <tr><td class="date">Wed, Jul 8 2026<br><span class="time">9:47 AM PDT</span></td><td><span class="ok">No availability</span></td><td class="window">2026-07-09 → 2026-10-31</td></tr>
+<tr class="failrow"><td class="date">Tue, Jul 7 2026<br><span class="time">10:24 AM PDT</span></td><td><span class="fail">Check failed</span> — no data for this run</td><td class="window">—</td></tr>
 <tr><td class="date">Mon, Jul 6 2026<br><span class="time">10:49 AM PDT</span></td><td><span class="ok">No availability</span></td><td class="window">2026-07-07 → 2026-10-31</td></tr>
 <tr><td class="date">Sun, Jul 5 2026<br><span class="time">9:17 AM PDT</span></td><td><span class="ok">No availability</span></td><td class="window">2026-07-06 → 2026-10-31</td></tr>
 <tr><td class="date">Sat, Jul 4 2026<br><span class="time">9:14 AM PDT</span></td><td><span class="ok">No availability</span></td><td class="window">2026-07-05 → 2026-10-31</td></tr>
 <tr><td class="date">Fri, Jul 3 2026<br><span class="time">9:43 AM PDT</span></td><td><span class="ok">No availability</span></td><td class="window">2026-07-04 → 2026-10-31</td></tr>
+<tr class="failrow"><td class="date">Thu, Jul 2 2026<br><span class="time">9:59 AM PDT</span></td><td><span class="fail">Check failed</span> — no data for this run</td><td class="window">—</td></tr>
 <tr><td class="date">Wed, Jul 1 2026<br><span class="time">10:23 AM PDT</span></td><td><span class="ok">No availability</span></td><td class="window">2026-07-02 → 2026-10-31</td></tr>
+<tr class="failrow"><td class="date">Tue, Jun 30 2026<br><span class="time">10:11 AM PDT</span></td><td><span class="fail">Check failed</span> — no data for this run</td><td class="window">—</td></tr>
 <tr><td class="date">Mon, Jun 29 2026<br><span class="time">10:47 AM PDT</span></td><td><span class="ok">No availability</span></td><td class="window">2026-06-30 → 2026-10-31</td></tr>
 <tr><td class="date">Sun, Jun 28 2026<br><span class="time">9:22 AM PDT</span></td><td><span class="ok">No availability</span></td><td class="window">2026-06-29 → 2026-10-31</td></tr>
 <tr><td class="date">Sat, Jun 27 2026<br><span class="time">9:17 AM PDT</span></td><td><span class="ok">No availability</span></td><td class="window">2026-06-28 → 2026-10-31</td></tr>
 <tr><td class="date">Fri, Jun 26 2026<br><span class="time">10:06 AM PDT</span></td><td><span class="ok">No availability</span></td><td class="window">2026-06-27 → 2026-10-31</td></tr>
 <tr><td class="date">Thu, Jun 25 2026<br><span class="time">10:22 AM PDT</span></td><td><span class="ok">No availability</span></td><td class="window">2026-06-26 → 2026-10-31</td></tr>
 <tr><td class="date">Wed, Jun 24 2026<br><span class="time">10:16 AM PDT</span></td><td><span class="ok">No availability</span></td><td class="window">2026-06-25 → 2026-10-31</td></tr>
+<tr class="failrow"><td class="date">Tue, Jun 23 2026<br><span class="time">10:21 AM PDT</span></td><td><span class="fail">Check failed</span> — no data for this run</td><td class="window">—</td></tr>
 <tr><td class="date">Mon, Jun 22 2026<br><span class="time">11:52 AM PDT</span></td><td><span class="ok">No availability</span></td><td class="window">2026-06-23 → 2026-10-31</td></tr>
 <tr><td class="date">Sun, Jun 21 2026<br><span class="time">9:53 AM PDT</span></td><td><span class="ok">No availability</span></td><td class="window">2026-06-22 → 2026-10-31</td></tr>
 <tr><td class="date">Sat, Jun 20 2026<br><span class="time">9:45 AM PDT</span></td><td><span class="ok">No availability</span></td><td class="window">2026-06-21 → 2026-10-31</td></tr>
+<tr class="failrow"><td class="date">Fri, Jun 19 2026<br><span class="time">10:24 AM PDT</span></td><td><span class="fail">Check failed</span> — no data for this run</td><td class="window">—</td></tr>
 <tr><td class="date">Thu, Jun 18 2026<br><span class="time">11:14 AM PDT</span></td><td><span class="ok">No availability</span></td><td class="window">2026-06-19 → 2026-10-31</td></tr>
 <tr><td class="date">Wed, Jun 17 2026<br><span class="time">11:00 AM PDT</span></td><td><span class="ok">No availability</span></td><td class="window">2026-06-18 → 2026-10-31</td></tr>
 <tr><td class="date">Tue, Jun 16 2026<br><span class="time">11:57 AM PDT</span></td><td><span class="ok">No availability</span></td><td class="window">2026-06-17 → 2026-10-31</td></tr>
@@ -103,7 +114,7 @@
     </tbody>
   </table>
 
-  <footer>Generated Thu, Jul 9 2026 at 2:14 PM PDT from
+  <footer>Generated Thu, Jul 9 2026 at 2:24 PM PDT from
   logs/history.jsonl. One row per completed run.</footer>
 </body>
 </html>
